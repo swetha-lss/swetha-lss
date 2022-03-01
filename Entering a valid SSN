@@ -1,0 +1,11 @@
+def valid_ssn():
+    ssn = input("Please enter a valid ssn: ").strip()  # 123456789
+    if not ssn.isnumeric():
+        print("Invalid SSN. Should only be numeric")
+    elif len(ssn) < 9:
+        print("Invalid SSN, The number is too short. Please enter a valid number.")
+    elif len(ssn) > 9:
+        print("Invalid SSN, The number is too long. Please enter a valid number.")
+    else:
+        print("You have entered a valid SSN. Thank you.")
+        print(ssn[:3] + "-" + ssn[3:5] + "-" + ssn[5:])
